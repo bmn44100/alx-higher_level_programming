@@ -14,4 +14,4 @@ if __name__ == "__main__":
                 sum_of_args += int(sys.argv[i])
                 i += 1
                 args -= 1
-            print("{:d}" .format(sum_of_args)
+            print("{:d}" .format(sum_of_args))
