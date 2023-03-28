@@ -2,31 +2,24 @@
 
 
 class Square:
-    """
-    creates square
-    """
+    ''' class representing a square
+    '''
 
     def __init__(self, size=0):
-        """
-        initializes square
-
-        Args:
-            size: size of side of square
-        """
-        self.__size = size
+        ''' method initializing a square of size size
+        '''
+        self.size = size
 
     @property
     def size(self):
-        """
-        finds size
-        """
+        ''' method that returns the size of the square
+        '''
         return self.__size
 
     @size.setter
     def size(self, value):
-        """
-        validates size is an integer greater than 0
-        """
+        ''' method that sets the size of the square
+        '''
         if type(value) is not int:
             raise TypeError('size must be an integer')
         elif value < 0:
@@ -35,10 +28,6 @@ class Square:
             self.__size = value
 
     def area(self):
-        """
-        finds area of a square
-
-        Returns:
-            area of a square
-        """
-        return self.__size ** 2
+        ''' method that returns area of the square
+        '''
+        return self.__size * self.__size
