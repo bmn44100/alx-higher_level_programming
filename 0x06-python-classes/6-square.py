@@ -12,7 +12,7 @@ class Square:
         Args:
             size: size of side of square
         """
-        self.size = size
+        self.__size = size
         self.position = position
 
     @property
