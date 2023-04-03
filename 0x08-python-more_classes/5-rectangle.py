@@ -69,6 +69,6 @@ class Rectangle:
         """ returns 'official' version of rectangle """
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
-    def __def__(self):
+    def __del__(self):
         """ prints message when an instance is deleted """
         print("Bye rectangle...")
