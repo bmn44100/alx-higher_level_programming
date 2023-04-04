@@ -12,20 +12,17 @@ def matrix_divided(matrix, div):
     by div, returns a new matrix
     """
     if type(matrix) is not list:
-        raise TypeError(
-                'matrix must be a matrix
-                (list of lists) of integers/floats')
+        raise TypeError('matrix must be a matrix
+                        (list of lists) of integers/floats')
     size_check = 0
     for row in matrix:
         if type(row) is not list:
-            raise TypeError(
-                    'matrix must be a matrix (list of
-                    lists) of integers/floats')
+            raise TypeError('matrix must be a matrix
+                            (list of lists) of integers/floats')
         for num in row:
             if type(num) is not int and type(num) is not float:
-                raise TypeError(
-                        'matrix must be a matrix (list
-                        of lists) of integers/floats')
+                raise TypeError('matrix must be a matrix
+                                (list of lists) of integers/floats')
         if size_check == 0:
             size_check = len(row)
         elif size_check != len(row):
