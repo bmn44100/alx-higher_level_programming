@@ -8,6 +8,7 @@ class MyList(list):
     def __init__(self):
         """ initializes the class """
         pass
+
     def print_sorted(self):
         """ prints a sorted list """
         print(sorted(self))
