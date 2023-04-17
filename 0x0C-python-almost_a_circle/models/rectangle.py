@@ -85,27 +85,16 @@ def area(self):
 
 def display(self):
     """ print the rectangle with # """
-    for i in range(self.__height):
-        for j in range(self.__width):
-            print("#", end="")
-        print()
+    print("\n" * self.y, end="")
+    for i in range(self.height):
+        print(" " * self.x, end="")
+        print("#" * self.width)
 
 
 def __str__(self):
     """ Update the class Rectangle by overriding the __str__ method """
     return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
         .format(self.id, self.x, self.y, self.width, self.height)
-
-
-def display(self):
-    """ prints rectangle with character # """
-    for i in range(self.__y):
-        print()
-    for k in range(self.__height):
-        print(" " * self.__x, end="")
-        for j in range(self.__width):
-            print("#", end="")
-        print()
 
 
 def update(self, *args, **kwargs):
