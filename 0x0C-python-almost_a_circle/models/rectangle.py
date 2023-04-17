@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ module that contains the class rectangle """
+from models.base import Base
 
 
 class Rectangle(Base):
