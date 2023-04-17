@@ -103,6 +103,28 @@ def display(self):
         print()
     for k in range(self.__height):
         print(" " * self.__x, end="")
-        for l in range(self.__width):
+        for j in range(self.__width):
             print("#", end="")
         print()
+
+
+def update(self, *args, **kwargs):
+    """ updates the rectangle """
+    if len(args) != 0:
+        i = 0
+        rect_attrs = ["id", "width", "height", "x", "y"]
+        for arg in args:
+            setattr(self, rect_attrs[i], args[i])
+            i += 1
+    else:
+        for k, v in kwargs.items():
+            setattr(self, k, v)
+
+
+def to_dictionary(self):
+    """ returns a dictionary representation of rectangle """
+    rect_dict = {}
+    rect_attrs = ["id", "width", "height", "x", "y"]
+    for attr in rect_attrs:
+        rect_dict[attr] = getattr(self, attr)
+    return rect_dict
