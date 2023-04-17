@@ -7,10 +7,10 @@ class Rectangle(Base):
     """ class Rectangle """
     def __init__(self, width, height, x=0, y=0, id=None):
         """ constructor for class Rectangle """
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
         super().__init__(id)
 
 
