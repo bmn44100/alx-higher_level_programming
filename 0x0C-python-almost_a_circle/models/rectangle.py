@@ -85,7 +85,7 @@ def area(self):
 
 def display(self):
     """ print the rectangle with # """
-    print("\n" * self.y, end="")
-    for i in range(self.height):
-        print(" " * self.x, end="")
-        print("#" * self.width)
+    for i in range(self.__height):
+        for j in range(self.__width):
+            print("#", end="")
+        print()
