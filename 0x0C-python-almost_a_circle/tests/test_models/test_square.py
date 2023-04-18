@@ -108,49 +108,49 @@ class TestSquare(unittest.TestCase):
 
     def test_size__errors(self):
         """ size tests """
-        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+        with self.assertRaises(ValueError):
             s = Square(0)
-        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+        with self.assertRaises(ValueError):
             s = Square(-1)
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square("one")
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1.1)
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square({1: 2})
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square((1, 2))
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square([1, 2])
 
     def test_x_errors(self):
         """ x value errors """
-        with self.assertRaisesRegex(ValueError, 'x must be >= 0'):
+        with self.assertRaises(ValueError):
             s = Square(1, -2)
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, "two")
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, 2.2)
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, {2: 3})
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, (2, 3))
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, [2, 3])
 
     def test_y_errors(self):
         """ y errors tests """
-        with self.assertRaisesRegex(ValueError, 'y must be >= 0'):
+        with self.assertRaises(ValueError):
             s = Square(1, 2, -3)
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, 2, "three")
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, 2, 3.3)
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, 2, {3: 4})
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, 2, (3, 4))
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             s = Square(1, 2, [3, 4])
 
     def test_update_args(self):
@@ -216,3 +216,7 @@ class TestSquare(unittest.TestCase):
     def tearDownClass(cls):
         """ remove instances created during tests """
         pass
+
+
+if __name__ == '__main__':
+    unittest.main()

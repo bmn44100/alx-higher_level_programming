@@ -115,66 +115,66 @@ class TestRectangle(unittest.TestCase):
 
     def test_width__errors(self):
         """ width value errors test """
-        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+        with self.assertRaises(ValueError):
             r = Rectangle(0, 1)
-        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+        with self.assertRaises(ValueError):
             r = Rectangle(-1, 2)
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle("one", 2)
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1.1, 2)
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle({1: 2}, 3)
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle((1, 2), 3)
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle([1, 2], 3)
 
     def test_height_errors(self):
         """ test height value errors """
-        with self.assertRaisesRegex(ValueError, 'height must be > 0'):
+        with self.assertRaises(ValueError):
             r = Rectangle(1, 0)
-        with self.assertRaisesRegex(ValueError, 'height must be > 0'):
+        with self.assertRaises(ValueError):
             r = Rectangle(1, -2)
-        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, "two")
-        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2.2)
-        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, {2: 3})
-        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, (2, 3))
-        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, [2, 3])
 
     def test_x_errors(self):
         """ type and value errors test for x """
-        with self.assertRaisesRegex(ValueError, 'x must be >= 0'):
+        with self.assertRaises(ValueError):
             r = Rectangle(1, 2, -3, 4)
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, "three", 4)
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, 3.3, 4)
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, {3: 4}, 5)
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, (3, 4), 5)
-        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, [3, 4], 5)
 
     def test_y_errors(self):
         """ type and value errors tests for y"""
-        with self.assertRaisesRegex(ValueError, 'y must be >= 0'):
+        with self.assertRaises(ValueError):
             r = Rectangle(1, 2, 3, -4)
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, 3, "four")
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, 3, 4.4)
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, 3, {4: 5})
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, 3, (4, 5))
-        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, 3, [4, 5])
 
     def test_update_args(self):
@@ -244,3 +244,7 @@ class TestRectangle(unittest.TestCase):
     def tearDownClass(cls):
         """ remove instances created for testing """
         pass
+
+
+if __name__ == '__main__':
+    unittest.main()

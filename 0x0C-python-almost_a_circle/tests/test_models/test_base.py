@@ -80,3 +80,7 @@ class TestBase(unittest.TestCase):
     def tearDownClass(cls):
         """ removes instances created during tests """
         pass
+
+
+if __name__ == '__main__':
+    unittest.main()
