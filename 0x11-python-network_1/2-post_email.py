@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == "__main__":
     post_url = argv[1]
-    url_data = {'email' : argv[2]}
+    url_data = {'email': argv[2]}
     url_data = parse_url.urlencode(url_data)
     url_data = url_data.encode('ascii')
     req_url = url_request.Request(post_url, url_data)
