@@ -1,7 +1,6 @@
 #!/usr/bin/node
-/*
-  a script that reads and prints the content of a file
-*/
+# a script that reads and prints the content of a file
+
 let fs = require('fs');
 let file_path = process.argv[2];
 let content = process.argv[3];
