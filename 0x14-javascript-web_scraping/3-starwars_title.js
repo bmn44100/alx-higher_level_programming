@@ -1,8 +1,5 @@
 #!/usr/bin/node
-/*
-  a script that prints the title of a Star Wars movie
-  where the episode number matches a given integer
-*/
+
 let request = require('request');
 let request_url = 'http://swapi.co/api/films/';
 let episode_number = process.argv[2];
