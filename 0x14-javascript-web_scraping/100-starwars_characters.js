@@ -1,10 +1,8 @@
 #!/usr/bin/node
-/*
-  a script that prints all characters of a Star Wars movie
-*/
+
 let request = require('request');
 let movie_id = process.argv[2];
-let request_url = 'http://swapi.co/api/films/' + movie_id;
+let request_url = 'https://swapi-api.alx-tools.com/api/films/' + movie_id;
 request(request_url, function (err, response, body) {
   if (err) {
     console.log(err);
